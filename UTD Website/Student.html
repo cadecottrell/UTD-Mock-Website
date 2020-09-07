@@ -1,0 +1,584 @@
+<html>
+<?php
+  session_start();
+?>
+<title>Student</title>
+<head>
+<link rel="stylesheet" type="text/css" href="CSS/studentStyle.css">
+<link rel="icon" href="sitePictures/utdLogo.png">
+<script type="text/javascript" src= "infoTab.js"></script>
+</head>
+<body onload="startDate()">
+
+<section class="infoTab">
+  <div class="info">
+    <p>Current Date/Time: <span id="Date/Time"></span></p>
+  </div>
+</section>
+
+<section class="headerSection">
+  <div class="header">
+    <h1>UTD Computer Science</h1>
+    <h6>Erik Jonsson School of Engineering and Computer Science</h6>
+  </div>
+</section>
+
+<div class="navigation">
+  <ul>
+
+  <li><a href="home.html">Home</a></li>
+  <li><a href="faculty.html">Faculty</a></li>
+  <li><a href="Student.html">Students</a></li>
+  <li><a href="research.html">Research</a></li>
+  <li><a href="admission.html">Admission</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  <li><a href="Signup.php">Sign Up</a></li>
+  <li><a href="login.php">Login</a></li>
+
+  </ul>
+</div>
+
+<section class="contentSection">
+  <div class="content">
+
+    <div class="column side">
+      <div class="tab">
+        <h2>Student Organizations</h2>
+        <table>
+          <tr>
+            <th>Organization</th>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>WOMEN WHO COMPUTE</td>
+            <td>Women Who Compute is a student organization dedicated to cultivating a community of female engineering and computer science students at The University of Texas at Dallas.</td>
+          </tr>
+          <tr>
+            <td>SOCIETY OF WOMEN ENGINEERS</td>
+            <td>The mission of the UT Dallas Chapter of the Society of Women Engineers is to stimulate women to achieve full potential in careers as engineers and leaders and to expand the image of the engineering profession as a positive force in improving the quality of life and demonstrate the value of diversity.</td>
+          </tr>
+          <tr>
+            <td>COMPUTER SECURITY GROUP</td>
+            <td>The Computer Security Group is a student organization open to all students.
+              Our members range from those who are preparing for a career in the wide field of security to those who are pursuing other careers in Computer Science and related fields but would like to know more about matters of security.</td>
+          </tr>
+          <tr>
+            <td>ARTIFICIAL INTELLIGENCE SOCIETY</td>
+            <td>Artificial Intelligence Society aims to promote the education and awareness of artificial intelligence-based systems and techniques at UT Dallas and in the surrounding communities.</td>
+          </tr>
+          <tr>
+            <td>BIG DATA CLUB</td>
+            <td>The purpose of the UT Dallas Big Data Club is to provide a structure through which students can learn, teach and network in the field of Big Data. The main purpose of this club is to create a group which has members who are highly motivated and interested in the field of Big Data.</td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+    <div class="column middle">
+      <div class="tab">
+        <h2>GRADE A STUDENTS</h2>
+        <h6>Approximately 3,315 bachelors degree students, 1,110 master’s students, 165 Ph.D. students.</h6>
+        <img class="mainPic" src="sitePictures/happyStudent.jpg" height="35%" width="90%">
+        <p>The University of Texas at Dallas is a dynamic public research university with more than 28,000 students offering top-ranked programs in science, technology engineering, arts and management. <br><br>
+        Here are some facts about our students: <br></p>
+
+        <ol>
+          <li>There are 20,994 Undergraduate Students</li>
+          <li>There are 8,549 Graduate Students</li>
+          <li>The average ACT score is 29</li>
+          <li>The average SAT score is 1344</li>
+          <li>A 23-to-1 Student/Faculty Ratio</li>
+        </ol>
+
+      </div>
+
+      <div class="tab">
+        <h2>COMPUTING SCHOLARS HONOR PROGRAM</h2>
+        <p>
+          The Computing Scholars Honor Program (CS2) is designed to attract students with excellent academic records and provide them a cohort elite style of classes taught by our best instructors at a deeper level of theory and mathematics.
+          The program aims to prepare participants for a career in research in academia, or at top industrial research labs and top high-tech companies.
+          The Computing Scholars Program has a specially designed curriculum based on fundamental mathematical and scientific principles.
+          The courses integrate discussion of current research, recent discoveries, and open problems into a rich logical progression of firmly related topics.
+          Admission to the program is mainly by invitation and will be limited to no more than 30 students per year. The selection committee also entertains nominations from parents, teachers, and others familiar with an applicant’s academic standing.
+        </p>
+      </div>
+
+
+      <div class="tab">
+        <h2>Take Our Enrollment Survey</h2>
+        <button onclick="startSurvey(this)">Start Survey</button>
+        <div id="surveyHolder" class="hidden">
+          <p style="display:inline">Timer: </p><p id="timer" style="display:inline"></p>
+          <br>
+          <br>
+          <form id="survey" name="survey" onSubmit="" method="post">
+            <div id="ques1" class="question boxLayout">
+              <h2>Question 1</h2>
+              <p>What is your classification?</p>
+              <div>
+                <label class="opaque">
+                  Freshman
+                  <input type ="radio" name="classification" value="Freshman">
+                </label>
+
+                <br>
+
+                <label class="opaque">
+                  Sophomore
+                  <input type ="radio" name="classification" value="Sophomore">
+                </label>
+
+                <br>
+
+                <label class="opaque">
+                  Junior
+                  <input type ="radio" name="classification" value="Junior">
+                </label>
+
+                <br>
+
+                <label class="opaque">
+                  Senior
+                  <input type ="radio" name="classification" value="Senior">
+                </label>
+
+                <br>
+
+                <label class="opaque">
+                  Graduate
+                  <input type ="radio" name="classification" value="Graduate">
+                </label>
+                <br>
+                <br>
+              </div>
+
+              <button type="button" onclick="nextQuestion(this)">Skip</button> <button type="button" onclick="nextQuestion(this)">Next</button>
+              <br>
+              <br>
+
+            </div>
+            <div id="ques2" class="question hidden boxLayout">
+
+              <h2>Question 2</h2>
+              <p>What school are you in?</p>
+              <div>
+              <label>
+              School of Natural Sciences and Mathematics
+              <input type ="radio" name="school" value="School of Natural Sciences and Mathematics">
+              </label>
+
+              <br>
+
+              <label>
+              Naveen Jindal School of Mathematics
+              <input type ="radio" name="school" value="Naveen Jindal School of Mathematics">
+              </label>
+
+              <br>
+
+              <label>
+              Erik Jonsson School of Engineering and Computer Science
+              <input type ="radio" name="school" value="Erik Jonsson School of Engineering and Computer Science ">
+              </label>
+
+              <br>
+
+              <label>
+              School of Economic, Political and Policy Sciences
+              <input type ="radio" name="school" value="School of Economic, Political and Policy Sciences">
+              </label>
+
+              <br>
+
+              <label>
+              School of Behavioral and Brain Sciences
+              <input type ="radio" name="school" value="School of Behavioral and Brain Sciences">
+              </label>
+              <br>
+
+              <label>
+              School of Arts, Technology, and Emerging Communication
+              <input type ="radio" name="school" value="School of Arts, Technology, and Emerging Communication">
+              </label>
+              <br>
+
+              <label>
+              School of Arts and Humanities
+              <input type ="radio" name="school" value="School of Arts and Humanities">
+              </label>
+              <br>
+
+              <label>
+              School of Interdisciplinary Studies
+              <input type ="radio" name="school" value="School of Interdisciplinary Studies">
+              </label>
+              <br>
+              <br>
+            </div>
+
+              <button type="button" onclick="lastQuestion(this)">Back</button> <button type="button" onclick="nextQuestion(this)">Skip</button> <button type="button" onclick="nextQuestion(this)">Next</button>
+
+              <br>
+              <br>
+            </div>
+
+            <div id="ques3" class="question hidden boxLayout">
+              <h2>Question 3</h2>
+              <p>If classes were to go in person this fall, how likely are you take class.</p>
+
+              <div>
+              <label>
+              Extremely likely
+              <input type ="radio" name="inperson" value="Extremely likely">
+              </label>
+              <br>
+
+              <label>
+              Somewhat likely
+              <input type ="radio" name="inperson" value="Somewhat likely">
+              </label>
+              <br>
+
+              <label>
+              Neither likely nor unlikely
+              <input type ="radio" name="inperson" value="Neither likely nor unlikely">
+              </label>
+              <br>
+
+              <label>
+              Somewhat unlikely
+              <input type ="radio" name="inperson" value="Somewhat unlikely ">
+              </label>
+              <br>
+
+              <label>
+              Extremely unlikely
+              <input type ="radio" name="inperson" value="Extremely unlikely">
+              </label>
+              <br>
+              <br>
+            </div>
+
+              <button type="button" onclick="lastQuestion(this)">Back</button> <button type="button" onclick="nextQuestion(this)">Skip</button> <button type="button" onclick="nextQuestion(this)">Next</button>
+            </div>
+
+            <div id="ques4" class="question hidden boxLayout">
+              <h2>Question 4</h2>
+              <p>If classes were to go online this fall, how likely are you take class.</p>
+              <div>
+              <label>
+              Extremely likely
+              <input type ="radio" name="online" value="Extremely likely">
+              </label>
+              <br>
+
+              <label>
+              Somewhat likely
+              <input type ="radio" name="online" value="Somewhat likely">
+              </label>
+              <br>
+
+              <label>
+              Neither likely nor unlikely
+              <input type ="radio" name="online" value="Neither likely nor unlikely">
+              </label>
+              <br>
+
+              <label>
+              Somewhat unlikely
+              <input type ="radio" name="online" value="Somewhat unlikely ">
+              </label>
+              <br>
+
+              <label>
+              Extremely unlikely
+              <input type ="radio" name="online" value="Extremely unlikely">
+              </label>
+              <br>
+              <br>
+            </div>
+              <button type="button" onclick="lastQuestion(this)">Back</button> <button type="button" onclick="nextQuestion(this)">Skip</button> <button type="button" onclick="nextQuestion(this)">Next</button>
+            </div>
+
+            <div id="ques5" class="question hidden boxLayout">
+              <h2>Question 5</h2>
+              <p>If classes were to go online this fall, how likely are you take a gap semester?</p>
+              <div>
+              <label>
+              Extremely likely
+              <input type ="radio" name="gap" value="Extremely likely">
+              </label>
+              <br>
+
+              <label>
+              Somewhat likely
+              <input type ="radio" name="gap" value="Somewhat likely">
+              </label>
+              <br>
+
+              <label>
+              Neither likely nor unlikely
+              <input type ="radio" name="gap" value="Neither likely nor unlikely">
+              </label>
+              <br>
+
+              <label>
+              Somewhat unlikely
+              <input type ="radio" name="gap" value="Somewhat unlikely ">
+              </label>
+              <br>
+
+              <label>
+              Extremely unlikely
+              <input type ="radio" name="gap" value="Extremely unlikely">
+              </label>
+              <br>
+              <br>
+            </div>
+              <button type="button" onclick="lastQuestion(this)">Back</button> <button type="button" onclick="nextQuestion(this)">Skip</button> <button type="button" onclick="nextQuestion(this)">Next</button>
+            </div>
+
+            <div id="ques6" class="question hidden boxLayout">
+              <h2>Question 6</h2>
+              <p>If classes were to go online this fall, how likely are you take class at community college?</p>
+              <div>
+              <label>
+              Extremely likely
+              <input type ="radio" name="communityC" value="Extremely likely">
+              </label>
+              <br>
+
+              <label>
+              Somewhat likely
+              <input type ="radio" name="communityC" value="Somewhat likely">
+              </label>
+              <br>
+
+              <label>
+              Neither likely nor unlikely
+              <input type ="radio" name="communityC" value="Neither likely nor unlikely">
+              </label>
+              <br>
+
+              <label>
+              Somewhat unlikely
+              <input type ="radio" name="communityC" value="Somewhat unlikely ">
+              </label>
+              <br>
+
+              <label>
+              Extremely unlikely
+              <input type ="radio" name="communityC" value="Extremely unlikely">
+              </label>
+              <br>
+              <br>
+            </div>
+              <button type="button" onclick="lastQuestion(this)">Back</button> <button id="Skip&Submit" type="submit">Skip & Submit</button> <button id="Submit" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="column side">
+      <div class ="tab">
+        <h2>Sign up for UTD CS NewsLetter</h2>
+        <p>Get weekly emails about upcoming events, and research from UTD</p>
+        <form>
+          <label for="Email">Email:</label>
+          <input type="text" id="Email" name="Email" value=""><br>
+
+          <p class="b">Would you like to sign up for the UTD General as well?</p>
+          <input type="radio" id="Yes" name="answer" value="Yes">
+          <label for="Yes">Yes</label><br>
+          <input type="radio" id="No" name="answer" value="No">
+          <label for="No">No</label><br><br>
+
+          <input type="submit" value="Submit">
+
+          </form>
+      </div>
+
+      <div class="tab">
+        <h2>Tutoring</h2>
+        <h6>The Computer Science Mentor Center</h6>
+        <p>The Computer Science Mentor Center welcomes students of Computer Science and Software Engineering who are studying Discrete Mathematics and Programming to augment and integrate their classroom learning.
+          A solid understanding of Computer Programming and Discrete Mathematics is essential to the success of Computer Science and Software Engineering students.
+          <br><br>
+          The Mentor Center is open 7 days a week.
+          It offers a variety of services designed to enhance and reinforce classroom activities by engaging students in an immersive environment.
+          Students receive on-the-spot individualized or group tutoring.
+          Students can study and do their homework at the Center, where expert coaching is readily available.
+        </p>
+        <br><br>
+
+        <p>Tutoring offered: </p>
+        <dl class="main">
+          <dt>CS 1336</dt>
+          <dd>Programming Fundamentals</dd>
+          <br>
+          <dt>CS 1337</dt>
+          <dd>Computer Science I</dd>
+          <br>
+          <dt>CS 2336</dt>
+          <dd>Computer Science II</dd>
+          <br>
+          <dt>CS 2305</dt>
+          <dd>Discrete Math I</dd>
+          <br>
+          <dt>CS 3305</dt>
+          <dd>Discrete Math II</dd>
+          <br>
+          <dt>CS 3340</dt>
+          <dd>Computer Architecture</dd>
+          <br>
+          <dt>SE 3306</dt>
+          <dd>Math Foundations of SE</dd>
+        </dl>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+
+<div class="footer">
+
+  <p>Can't See? Double the Text Size! <button onclick="doubleTextSize()">Try it</button> </p>
+  <p>Want a different Color? Click this! <button onclick="changeTabBackground()">Try it</button> </p>
+
+  <p><em>Cade Cottrell</em>
+  <br>
+  NetID: <strong>cac160030</strong>
+  <br>
+  Assignment 1</p>
+  <img src="sitePictures/utdLogo.png">
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$('#survey input').on('change', function(){
+
+  if($(this).parent().css('opacity') == 0.5){
+    $(this).parent().stop().fadeTo("fast", 1);
+    $(this).parent().siblings().stop().fadeTo("fast", 0.5);
+  }
+  else {
+    $(this).parent().siblings().stop().fadeTo("fast",0.5);
+  }
+
+});
+
+$("#survey").submit(function(event){
+  var data = [];
+  var classificationCount = 0;
+  var schoolCount = 0;
+  var inPersonCount = 0;
+  var onlineCount = 0;
+  var gapCount = 0;
+  var communityCCount = 0;
+
+  $("#survey input[type='radio'][name='classification']").each(function(){
+    if(this.checked)
+    {
+      data.push($(this).val());
+    }
+    else{
+      classificationCount = classificationCount + 1;
+    }
+
+    if(classificationCount == 5)
+    {
+      data.push("N/A");
+    }
+  });
+
+  $("#survey input[type='radio'][name='school']").each(function(){
+    if(this.checked)
+    {
+      data.push($(this).val());
+    }
+    else{
+      schoolCount = schoolCount + 1;
+    }
+
+    if(schoolCount == 8)
+    {
+      data.push("N/A");
+    }
+  });
+
+  $("#survey input[type='radio'][name='inperson']").each(function(){
+    if(this.checked)
+    {
+      data.push($(this).val());
+    }
+    else{
+      inPersonCount = inPersonCount + 1;
+    }
+
+    if(schoolCount == 5)
+    {
+      data.push("N/A");
+    }
+  });
+
+  $("#survey input[type='radio'][name='online']").each(function(){
+    if(this.checked)
+    {
+      data.push($(this).val());
+    }
+    else{
+      onlineCount = onlineCount + 1;
+    }
+
+    if(onlineCount == 5)
+    {
+      data.push("N/A");
+    }
+  });
+
+  $("#survey input[type='radio'][name='gap']").each(function(){
+    if(this.checked)
+    {
+      data.push($(this).val());
+    }
+    else{
+      gapCount = gapCount + 1;
+    }
+
+    if(gapCount == 5)
+    {
+      data.push("N/A");
+    }
+  });
+
+  $("#survey input[type='radio'][name='communityC']").each(function(){
+    if(this.checked)
+    {
+      data.push($(this).val());
+    }
+    else{
+      communityCCount = communityCCount + 1;
+    }
+
+    if(communityCCount == 5)
+    {
+      data.push("N/A");
+    }
+  });
+
+
+  alert("You took " + timeShown + " to complete the survey.\nSummary:\nQuestion 1: "+ data[0] +"\nQuestion 2: " + data[1] + "\nQuestion 3: " + data[2] + "\nQuestion 4: " + data[3] + "\nQuestion 5: " + data[4] + "\nQuestion 6: " + data[5]);
+});
+</script>
+
+
+</body>
+</html>

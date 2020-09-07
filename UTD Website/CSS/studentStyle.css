@@ -1,0 +1,240 @@
+*{
+  box-sizing: border-box;
+}
+
+.body{
+  font-family: Arial;
+  font-style: normal;
+  margin: 0;
+}
+
+.transparent{
+  opacity:0.5;
+}
+
+.opaque{
+  opacity:1;
+}
+
+.hidden{
+  display: none;
+}
+
+.boxLayout{
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
+}
+
+.infoTab{
+  background-color: #154734;
+  text-align: center;
+}
+
+.infoTab p{
+  color: white;
+  padding: 3px;
+  font-family: Helvetica;
+}
+
+.headerSection{
+  position: relative;
+  background-image: url(../sitePictures/utdbackground.jpg);
+  align-items: center;
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.header{
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 15px;
+  font-size: 40px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.header h1{
+  color: #e87500;
+  text-shadow: -1px 0px #154734, 0px 1px #154734, 1px 0px #154734, 0px -1px #154734;
+}
+
+.header h6{
+  color: #e87500;
+  text-shadow: -1px 0px #154734, 0px 1px #154734, 1px 0px #154734, 0px -1px #154734;
+}
+
+.navigation{
+  background-color: #e65c00;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  padding: 0;
+  width: 100%;
+}
+
+.navigation ul{
+  clear: left;
+  float: left;
+  list-style: none;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation ul li{
+  display: block;
+  float: left;
+  line-style: none;
+  position: relative;
+  right: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 0;
+}
+
+.navigation a{
+  float: left;
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  visibility: visible;
+}
+
+.navigation a:link{
+  color: white;
+}
+
+.navigation a:visited{
+  color:silver;
+}
+
+.navigation a:hover{
+  background-color: #ffc299;
+  color: black;
+}
+
+.navigation a:active{
+  background-color: #ffc299;
+  color: #154734;
+}
+
+
+.contentSection{
+  position: relative;
+  background-image: url(../sitePictures/studentBackground.gif);
+  background-size: 100% 100%;
+  padding: 10px
+}
+
+.content{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.tab{
+  background: rgba(255, 255, 255, 0.6);
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.tab table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab li{
+  list-style-position: inside;
+}
+
+img.round{
+  border-radius: 4px;
+}
+
+img.sidePic{
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+img.mainPic{
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column{
+  float: left;
+}
+
+.column.side{
+  width: 25%;
+  text-align: center;
+}
+
+.column.middle{
+  width: 50%;
+  text-align: center;
+}
+
+.content::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer{
+  padding: 5px;
+  background: silver;
+  margin-top: 0px;
+  border-color: #154734;
+  border-style: solid;
+  border-top-style: solid;
+  vertical-align: baseline;
+  opacity: 0.9;
+}
+
+.footer img{
+  height: 2%;
+  width: 1%;
+
+}
+
+dl.main{
+  border: 1px solid black;
+  text-align: center;
+}
+
+dt.main{
+  text-align: center;
+}
+
+table, th, td{
+  border: 1px solid black;
+}
+
+p.b{
+  font-weight: bold;
+}

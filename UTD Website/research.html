@@ -1,0 +1,308 @@
+<html>
+<?php
+  session_start();
+?>
+<title>Research</title>
+<head>
+<link rel="stylesheet" type="text/css" href="CSS/researchStyle.css">
+<link rel="icon" href="sitePictures/utdLogo.png">
+<script type="text/javascript" src= "infoTab.js"></script>
+</head>
+
+<body onload="startDate()">
+
+<section class="infoTab">
+  <div class="info">
+    <p>Current Date/Time: <span id="Date/Time"></span></p>
+  </div>
+</section>
+
+<section class="headerSection">
+  <div class="header">
+    <h1>UTD Computer Science</h1>
+    <h6>Erik Jonsson School of Engineering and Computer Science</h6>
+  </div>
+</section>
+
+
+<div class="navigation">
+  <ul>
+
+  <li><a href="home.html">Home</a></li>
+  <li><a href="faculty.html">Faculty</a></li>
+  <li><a href="Student.html">Students</a></li>
+  <li><a href="research.html">Research</a></li>
+  <li><a href="admission.html">Admission</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  <li><a href="Signup.php">Sign Up</a></li>
+  <li><a href="login.php">Login</a></li>
+
+  </ul>
+</div>
+
+<section class="contentSection">
+  <div class="content">
+
+    <div class="column side">
+      <div class="tab">
+        <div class="labs">
+        </div>
+      </div>
+    </div>
+
+    <div class="column middle">
+      <div class="tab">
+        <div class="headerSetting">
+
+          <div class="researchItem">
+          </div>
+
+          <div class="researchItem">
+          </div>
+
+        </div>
+        <div class="headerSetting">
+
+          <div class="researchItem">
+          </div>
+
+          <div class="researchItem">
+          </div>
+
+        </div>
+        <div class="headerSetting">
+
+          <div class="researchItem">
+          </div>
+
+          <div class="researchItem">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="footer">
+
+  <p>Can't See? Double the Text Size! <button onclick="doubleTextSize()">Try it</button> </p>
+  <p>Want a different Color? Click this! <button onclick="changeTabBackground()">Try it</button> </p>
+
+  <p><em>Cade Cottrell</em>
+  <br>
+  NetID: <strong>cac160030</strong>
+  <br>
+  Assignment 1</p>
+  <img src="sitePictures/utdLogo.png">
+</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script>
+//Find the research item class and add our headings
+$(document).ready(function(){
+  var data = [];
+  $(".researchItem").each(function(){
+    data.push($(this));
+  });
+
+  $(data[0]).append("<h1 id='CyberSecurityOff'>Cyber Security</h1>");
+  $(data[1]).append("<h1 id='ComputingTheoryOff'>Computing Theory</h1>");
+  $(data[2]).append("<h1 id='ComputingSystemsOff'>Computer Systems</h1>");
+  $(data[3]).append("<h1 id='AIOff'> Artificial Intelligence/Machine Learning</h1>");
+  $(data[4]).append("<h1 id='SEOff'>Software Engineering</h1>");
+  $(data[5]).append("<h1 id='NetworkOff'>Network</h1>");
+
+});
+
+//Display CyberSecurity info
+$(document).on('click', "#CyberSecurityOff",function(){
+  var image = "<img id='cyberPic' src='sitePictures/cyber.png' width = '50%' height='50%' />"
+  var paragraph = "<p id='cyber'>Cyber Security Research in the UT Dallas CS department is conducted within the umbrella of the Cyber Security Research and Education Institute. Its origins go back to October 2004 when UTD’s Cyber Security Research Center (CSRC) was established soon after which it received the NSA/DHS Center of Academic Excellence designation in Information Assurance Education (CAEIAE) in June 2004. After receiving the NHA/DHS CAE in Research in 2008 and a $1.8 million Scholarship for Service (SFS) award from the NSF in 2010, our efforts and in cyber security research education were combined to establish Cyber Security Research and Education Center in January 2012. Subsequently, due to significant growth in faculty hiring, research and education in cyber security, the Cyber Security Research and Education Institute was established in April 2013.</p>"
+  var unordered= "<h3>Current focuses</h3><ul> <li>Find and Resolve Software Exploits</li> <li>Create More Complex Encryption</li><li>Develop New Tactics To Fight Cyber Hacks</li></ul>";
+
+  $(this).after(unordered);
+  $(this).after(paragraph);
+  $(this).after(image);
+  $(this).attr("id","CyberSecurityOn");
+});
+
+//Take down the info
+$(document).on('click', "#CyberSecurityOn",function(){
+  $(this).siblings().remove();
+  $(this).attr("id","CyberSecurityOff");
+});
+
+//Display ComputingTheory info
+$(document).on('click', '#ComputingTheoryOff',function(){
+    var image = "<img id='cyberPic' src='sitePictures/computerTheory.jpg' width = '80%' height='65%' />"
+    var paragraph = "<p>The computing theory researchers in the Computer Science Department are focused on issues related to algorithms, combinatorics, graph theory, and cryptography. Key research areas include algorithms, combinatorics and optimization, computational biology, computational complexity, computational geometry, cryptography, and secure multiparty computations. There are a number of faculty members involved in this area. Research in the computing theory group is supported by the National Science Foundation (NSF).</p>"
+    var unordered= "<h3>Current focuses</h3><ul> <li>Develop a Deeper Understanding of Efficient Computation</li> <li>Computability Theory</li> <li>Automata Theory</li></ul>";
+
+    $(this).after(unordered);
+    $(this).after(paragraph);
+    $(this).after(image);
+    $(this).attr("id","ComputingTheoryOn");
+});
+
+//Take down the info
+$(document).on('click', '#ComputingTheoryOn',function(){
+    $(this).siblings().remove();
+    $(this).attr("id","ComputingTheoryOff");
+});
+
+//Display Computer Systems info
+$(document).on('click', '#ComputingSystemsOff',function(){
+    var image = "<img id='cyberPic' src='sitePictures/systems.jpg' width = '90%' height='55%' />"
+    var paragraph = "<p>The System researchers at UT Dallas perform world-class research on diverse topics such as parallel embedded systems, embedded software, parallel computers and networking, data mining, database systems, forensic analysis, multimedia, computer graphics, visualization, and programming language security. The research has been funded by external sources including NSF, NASA, NGA, AFOSR, ARMY, Raytheon, NOKIA, Texas Instruments, CISCO, AT&T, Texas Advanced Research Program, Microsoft, USA, and Tektronix. A number of young faculty members received the prestigious NSF Career award and AFOSR Early Investigator Award.</p>"
+    var unordered= "<h3>Current focuses</h3><ul> <li>Network Control</li> <li>Robotics</li> <li>Compressed sensing</li></ul>";
+
+    $(this).after(unordered);
+    $(this).after(paragraph);
+    $(this).after(image);
+    $(this).attr("id","ComputingSystemsOn");
+
+});
+
+//Take down the info
+$(document).on('click', '#ComputingSystemsOn',function(){
+    $(this).siblings().remove();
+    $(this).attr("id","ComputingSystemsOff");
+});
+
+//Display AI info
+$(document).on('click', '#AIOff',function(){
+    var image = "<img id='cyberPic' src='sitePictures/ai.jpeg' width = '75%' height='35%' />"
+
+    var paragraph = "<p>Work in Intelligent Systems (IS) involves several aspects of Artificial Intelligence, with a special focus on Natural Language Processing, Speech and Machine Learning.  Many faculty and students in the IS track are involved in the Human Language Technology Research Institute, which has been in existence since 2002. The goal of the Human Language Technology Research Institute (HLTRI) is to incorporate activities in a broad spectrum of disciplines such as natural language processing, speech recognition and synthesis, knowledge acquired from texts and text mining from a variety of genres. These activities enable computers to interact with humans using natural language capabilities and to serve as useful assistants to humans by providing services such as automatic text understanding and retrieval, question answering, automatic translation and speech recognition. HLTRI is one of the very few Institutes in the world dedicated to the study and research of language and its automatic processing. Work in the HLTRI is cross-disciplinary, attracting researchers from several schools and departments in the University. This is justified by the cross-disciplinary aspects of language processing and artificial intelligence. Our faculty have expertise in several areas of IS, allowing them and their students to generate original and valuable research with many applications, e.g. processing electronic medical records, capturing the semantics of texts on the Web and in social media as well as proving summaries of discussions and spoken dialogs.</p>"
+
+
+    var unordered= "<h3>Current focuses</h3><ul> <li>Develop new on-demand technologies for machine learning and large-scale data analysis.</li> <li>Jointly research and develop tools, products, and services for our partners.</li><li>Develop IP with and for our partners on demand.</li></ul>";
+
+
+    $(this).after(unordered);
+    $(this).after(paragraph);
+    $(this).after(image);
+    $(this).attr("id","AIOn");
+});
+
+//Take down the info
+$(document).on('click', '#AIOn',function(){
+    $(this).siblings().remove();
+    $(this).attr("id","AIOff");
+});
+
+//Display SE info
+$(document).on('click', '#SEOff',function(){
+    var image = "<img id='cyberPic' src='sitePictures/se.jpg' width = '100%' height='45%' />"
+
+    var paragraph = "<p>The software engineering researchers in the Computer Science Department are focused on issues related to effectively developing large-scale, complex systems. In particular, new categories of applications are emerging such as Big Data, Cyber-physical, and autonomous adaptable systems, which continue to drive leading-edge research in software engineering on diverse topics. Key research areas include requirements engineering, architecture, design, component-based engineering, testing and verification, static analysis, software maintenance, and multi-agent systems. A number of faculty members are involved in software engineering research.</p>"
+
+
+    var unordered= "<h3>Current focuses</h3><ul> <li>Application Development</li> <li>Creating New Development Techniques</li> <li>New Software Maintainence Protocols</li></ul>";
+
+    $(this).after(unordered);
+    $(this).after(paragraph);
+    $(this).after(image);
+    $(this).attr("id","SEOn");
+});
+
+//Take down the info
+$(document).on('click', '#SEOn',function(){
+    $(this).siblings().remove();
+    $(this).attr("id","SEOff");
+});
+
+//Display Networks info
+$(document).on('click', '#NetworkOff',function(){
+  var image = "<img id='cyberPic' src='sitePictures/networks.jpg' width = '100%' height='55%' />"
+
+  var paragraph = "<p>The networking researchers in the Computer Science Department are focused on issues related to the design and evaluation of next-generation computer and telecommunication networks. Key research areas include wireless and mobile networking, analysis and modeling of large networks, quality of service scheduling, network reliability and survivability, optical networking, network monitoring and Internet measurements, network security, group communication, and IP multicast, algorithmic issues in wireless sensor networks, mobile ad hoc networks, cognitive radio networks, distributed algorithms, resource allocation, high-performance network architectures, and network switches and routers.</p>"
+
+
+  var unordered= "<h3>Current focuses</h3><ul> <li>Research New Internet Protocols</li> <li>Create New Wireless Networks</li> <li>Overlay Networks</li></ul>";
+
+  $(this).after(unordered);
+  $(this).after(paragraph);
+  $(this).after(image);
+  $(this).attr("id","NetworkOn");
+});
+
+
+//Take down the info
+$(document).on('click', '#NetworkOn',function(){
+    $(this).siblings().remove();
+    $(this).attr("id","NetworkOff");
+});
+
+$(document).ready(function(){
+  var data = [];
+  $(".labs").each(function(){
+    data.push($(this));
+  });
+
+  $(data[0]).append("<h1 id='labInfoOff'>Labs</h1>");
+  data = [];
+
+});
+
+$(document).on('click', '#labInfoOff',function(){
+  var text = "<labroom><lab>" +
+  "<name>Artificial Intelligence of Space</name>" +
+  "<researchArea>AI</researchArea>" +
+  "<labDirector>Dr. Gopal Gupta</labDirector>" +
+  "<member>Cade Cottrell</member>" +
+  "<member>Steve Mogh</member>" +
+  "<member>John Kallen</member>" +
+  "</lab>" +
+
+  "<lab>" +
+  "<name>Network Lab</name>" +
+  "<researchArea>Networks</researchArea>" +
+  "<labDirector>Dr. Kamil Sarac</labDirector>" +
+  "<member>Stuart Kebl</member>" +
+  "<member>Daniel Opal</member>" +
+  "<member>Ian Dub</member>" +
+  "</lab>" +
+
+  "<lab>" +
+  "<name>Cyber Security Protocols</name>" +
+  "<researchArea>Cyber Security</researchArea>" +
+  "<labDirector>Dr. Kevin Hamlen</labDirector>" +
+  "<member>Robert Lilj</member>" +
+  "<member>Jordan Mayberry</member>" +
+  "<member>Kevin Smith</member>" +
+  "</lab>" +
+
+  "</labroom>";
+
+  var parser = new DOMParser();
+  var xmlDoc = parser.parseFromString(text,"text/xml");
+  var labName = xmlDoc.getElementsByTagName("name");
+  var researchArea = xmlDoc.getElementsByTagName("researchArea");
+  var labDirector = xmlDoc.getElementsByTagName("labDirector");
+  var labMembers = xmlDoc.getElementsByTagName("member");
+  var table = "<table id='labStuff'><tr> <th>Lab Name</th> <th>Research Area</th> <th>Lab Director</th> <th>Lab Members</th></tr> <td>"
+  var tableItem1 = labName[0].childNodes[0].nodeValue +"</td> <td>"+ researchArea[0].childNodes[0].nodeValue +"</td> <td>"+ labDirector[0].childNodes[0].nodeValue +"</td> <td>"+ labMembers[0].childNodes[0].nodeValue +",<br> "+ labMembers[1].childNodes[0].nodeValue + ",<br> " + labMembers[2].childNodes[0].nodeValue + "</td>";
+  var tableItem2 = "<tr><td>"+ labName[1].childNodes[0].nodeValue +"</td> <td>"+ researchArea[1].childNodes[0].nodeValue +"</td> <td>"+ labDirector[1].childNodes[0].nodeValue +"</td> <td>"+ labMembers[3].childNodes[0].nodeValue +",<br> "+ labMembers[4].childNodes[0].nodeValue + ",<br> " + labMembers[5].childNodes[0].nodeValue + "</td></tr>";
+  var tableItem3 = "<tr><td>"+ labName[2].childNodes[0].nodeValue +"</td> <td>"+ researchArea[2].childNodes[0].nodeValue +"</td> <td>"+ labDirector[2].childNodes[0].nodeValue +"</td> <td>"+ labMembers[6].childNodes[0].nodeValue +",<br> "+ labMembers[7].childNodes[0].nodeValue + ",<br> " + labMembers[8].childNodes[0].nodeValue + "</td></tr>";
+  var tableEnd = "</table>"
+
+  table = table + tableItem1 + tableItem2 + tableItem3 + tableEnd;
+  $("#labInfoOff").after(table);
+  $(this).attr("id","labInfoOn");
+});
+
+$(document).on('click', '#labInfoOn',function(){
+    $(this).siblings().remove();
+    $(this).attr("id","labInfoOff");
+});
+
+
+</script>
+</html>

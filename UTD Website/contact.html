@@ -1,0 +1,249 @@
+<html>
+<?php
+  session_start();
+?>
+<title>Contact Us</title>
+<head>
+<link rel="stylesheet" type="text/css" href="CSS/contactStyle.css">
+<link rel="icon" href="sitePictures/utdLogo.png">
+<script type="text/javascript" src= "infoTab.js"></script>
+</head>
+<body onload="startDate()">
+
+<section class="infoTab">
+  <div class="info">
+    <p>Current Date/Time: <span id="Date/Time"></span></p>
+  </div>
+</section>
+
+<section class="headerSection">
+  <div class="header">
+    <h1>UTD Computer Science</h1>
+    <h6>Erik Jonsson School of Engineering and Computer Science</h6>
+  </div>
+</section>
+
+<div class="navigation">
+  <ul>
+
+  <li><a href="home.html">Home</a></li>
+  <li><a href="faculty.html">Faculty</a></li>
+  <li><a href="Student.html">Students</a></li>
+  <li><a href="research.html">Research</a></li>
+  <li><a href="admission.html">Admission</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  <li><a href="Signup.php">Sign Up</a></li>
+  <li><a href="login.php">Login</a></li>
+
+  </ul>
+</div>
+
+<section class="contentSection">
+  <div class="content">
+
+    <div class="column side">
+
+      <div class="tab">
+        <?php
+        if (isset($_SESSION['userEmail'])){
+          echo '<h1>YOU ARE LOGGED IN</h1>';
+        }
+        else{
+          echo '<h1>YOU ARE NOT LOGGED IN</h1>';
+        }
+        ?>
+        <h2>Need to contact a specific Department?</h2>
+        <p>Click below for a more indepth contact list</p>
+        <a href="https://www.utdallas.edu/enroll/contact/who-can-help/">UTD Contact List</a>
+      </div>
+
+      <div class="tab">
+        <h2>Want to talk to a representative on your computer?</h2>
+        <p>With our new representative portal, you will be able to contact UTD representatives within minutes!</p>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here to speak to a representative</a>
+      </div>
+
+      <div class="tab">
+        <h2>Follow Us on Social Media!</h2>
+
+        <ol>
+          <li><a href="https://www.facebook.com/UTDallasVisitorCenter">FaceBook</a></li>
+          <li><a href="https://twitter.com/futurecomets">Twitter</a></li>
+          <li><a href="https://www.youtube.com/user/UTDallasComets">Youtube</a></li>
+          <li><a href="https://www.instagram.com/futurecomets/">Instagram</a></li>
+        </ol>
+
+      </div>
+
+    </div>
+
+    <div class="column middle">
+      <div class="tab">
+        <h2>Contact Information</h2>
+        <h6>Where to Find Us</h6>
+
+        <img class="mainPic" src="sitePictures/contactHappy.jpg" height="36%" width="80%">
+        <br><br>
+
+        <table>
+          <tr>
+            <th>Contact By</th>
+            <th>Contact Info</th>
+          </tr>
+          <tr>
+            <td>Mail</td>
+            <td>The University of Texas at Dallas <br>
+              Admission and Enrollment <br>
+              800 W Campbell Rd <br>
+              Richardson TX 75080-3021</td>
+          </tr>
+          <tr>
+            <td>In Person</td>
+            <td>Student Services Building<br>
+              Front Desk<br>
+              Monday-Friday: 8 a.m.-5p.m</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td>
+              1-972-883-2270 <br>
+              Toll free: 1-800-889-2443<br>
+              Fax: 1-972-883-2599</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>admission@utdallas.edu</td>
+          </tr>
+          <tr>
+            <td>Undergraduate Pre-Admissions Counseling</td>
+            <td>Walk-in Hours
+              Monday-Friday: 11 a.m.-2 p.m.</td>
+          </tr>
+        </table>
+        <br>
+
+      </div>
+
+
+      <div class="tab">
+        <h2>Contact Us</h2>
+        <div class="boxLayout">
+          <form name='contactUs' onSubmit="return validate();" method="post">
+            <br>
+            <label for="fname">First name:</label>
+            <input type="text" name="fname" id="fname" pattern="[A-Z]+[A-Za-z]{1,}" title="First name must be capitalized and alphabetic only" required>
+
+            <br>
+            <br>
+
+            <label for="lname">Last name:</label>
+            <input type="text" name="lname" id="lname" pattern="[A-Z]+[A-Za-z]{1,}" title="Last name must be capitalized and alphabetic only" required>
+
+            <br>
+            <br>
+
+            <label for="phone">Phone number:</label>
+            <input type="tel" name="phone" id="phone" pattern="\(\d{3}\) \d{3}-\d{4}" title="Phone numbers must be exactly this format: (123) 456-7890" placeholder="(123) 456-7890" required>
+
+            <br>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" pattern="[A-za-z0-9._%+-]+@utdallas.edu" title="All emails need to be @utdallas.edu" placeholder="NETID@utdallas.edu" required>
+
+            <br>
+            <br>
+
+            <label>Choose your Gender:</label>
+            <br>
+
+            <label>
+              Male
+              <input type ="radio" name="gender" value="Male" required>
+            </label>
+
+            <br>
+
+            <label>
+              Female
+              <input type ="radio" name="gender" value="Female">
+            </label>
+
+            <br>
+
+            <label>
+              Other
+              <input type ="radio" name="gender" value="Other">
+            </label>
+
+            <br>
+            <br>
+
+            <label for="comment">Comments:</label>
+            <br>
+            <textarea id="comment" name="comment" placeholder="Write your comment..." required></textarea>
+
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="column side">
+      <div class ="tab">
+        <h2>Sign up for UTD CS NewsLetter</h2>
+        <p>Get weekly emails about upcoming events, and research from UTD</p>
+        <form>
+          <label for="Email">Email:</label>
+          <input type="text" id="Email" name="Email" value=""><br>
+
+          <p class="b">Would you like to sign up for the UTD General as well?</p>
+          <input type="radio" id="Yes" name="answer" value="Yes">
+          <label for="Yes">Yes</label><br>
+          <input type="radio" id="No" name="answer" value="No">
+          <label for="No">No</label><br><br>
+
+          <input type="submit" value="Submit">
+
+          </form>
+      </div>
+
+      <div class="tab">
+
+        <h2>Other Helpful Tools</h2>
+
+        <dl class="main">
+          <dt>Undergraduate counselor locator</dt>
+          <dd><a href="https://www.utdallas.edu/enroll/contact/admissions-counselors/">Counselor Locator Tool</a></dd>
+          <dt>Graduate Department Support</dt>
+          <dd><a href="https://www.utdallas.edu/admissions/graduate/coronavirus/">Graduate Support</a></dd>
+        </dl>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+</section>
+
+<div class="footer">
+
+  <p>Can't See? Double the Text Size! <button onclick="doubleTextSize()">Try it</button> </p>
+  <p>Want a different Color? Click this! <button onclick="changeTabBackground()">Try it</button> </p>
+
+  <p><em>Cade Cottrell</em>
+  <br>
+  NetID: <strong>cac160030</strong>
+  <br>
+  Assignment 1</p>
+  <img src="sitePictures/utdLogo.png">
+</div>
+
+
+</body>
+</html>

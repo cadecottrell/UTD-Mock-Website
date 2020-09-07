@@ -1,0 +1,162 @@
+<html>
+<?php
+  session_start();
+?>
+<title>Home</title>
+<head>
+<link rel="stylesheet" type="text/css" href="CSS/homeStyle.css">
+<link rel="icon" href="sitePictures/utdLogo.png">
+<script type="text/javascript" src= "infoTab.js"></script>
+</head>
+<body onload="startDate()">
+
+<section class="infoTab">
+  <div class="info">
+    <p>Current Date/Time: <span id="Date/Time"></span></p>
+  </div>
+</section>
+
+
+
+<section class="headerSection">
+  <div class="header">
+    <h1>UTD Computer Science</h1>
+    <h6>Erik Jonsson School of Engineering and Computer Science</h6>
+  </div>
+</section>
+
+<div class="navigation">
+  <ul>
+
+  <li><a href="home.html">Home</a></li>
+  <li><a href="faculty.html">Faculty</a></li>
+  <li><a href="Student.html">Students</a></li>
+  <li><a href="research.html">Research</a></li>
+  <li><a href="admission.html">Admission</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  <li><a href="Signup.php">Sign Up</a></li>
+  <li><a href="login.php">Login</a></li>
+
+  </ul>
+</div>
+
+<section class="contentSection">
+  <div class="content">
+
+    <div class="column side">
+      <div class="tab">
+        <h2>UTD CS Events</h2>
+        <h6>Upcoming dates</h6>
+
+        <table>
+          <tr>
+            <th>Event</th>
+            <th>Date</th>
+          </tr>
+          <tr>
+            <td>Deep-dive into Testing Series</td>
+            <td>Jun 14th, 2020</td>
+          </tr>
+          <tr>
+            <td>Architecting on AWS</td>
+            <td>Jun 14th, 2020</td>
+          </tr>
+          <tr>
+            <td>HTML and JavaScript Review</td>
+            <td>Jun 14th, 2020</td>
+          </tr>
+          <tr>
+            <td>Front end development with Angular</td>
+            <td>Jun 15th, 2020</td>
+          </tr>
+          <tr>
+            <td>Front end development with Angular</td>
+            <td>Jun 16th, 2020</td>
+          </tr>
+        </table>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+      <div class="tab">
+        <h2>Our research focuses on...</h2>
+
+        <ol>
+          <li>Computer Systems</li>
+          <li>Cyber Security</li>
+          <li>Computer Networks</li>
+          <li>Data Science</li>
+          <li>Software Engineering</li>
+          <li>Intelligent Systems</li>
+          <li>Theoretical Computer Science</li>
+        </ol>
+
+        <p>If you are intersted in our research, apply for a faculty job.</p>
+      </div>
+
+
+      </div>
+
+    <div class="column middle">
+      <div class="tab">
+        <h2>ONE OF THE LARGEST CS DEPARTMENTS</h2>
+        <h6>Approximately 3,315 bachelors degree students, 1,110 master’s students, 165 Ph.D. students, 52 tenure-track faculty members, and 44 senior lecturers, and over 500 part-time student employees.</h6>
+        <p>The Department of Computer Science is the flagship department of the Erik Jonsson School of Computer Science and Engineering of the University of Texas at Dallas (UT Dallas).
+          UT Dallas is a dynamic, rapidly growing institution made up of seven schools that feature an array of outstanding undergraduate and graduate degree programs. <br><br>
+        <img class="round" src="sitePictures/csHomePicture.jpg"> <br><br>
+        With more than 20,000 students and nearly 800 faculty, UT Dallas boasts a freshman class that consistently ranks among the top three in Texas in terms of SAT scores, number of National Merit Scholars and students in the top 10 percent of their high school class. And with plans to significantly increase the size of its student body, faculty and research funding in the coming years, the university has added more than 700,000 square feet of classrooms, laboratories and other new space since 2001. <br> <br>
+        The Department of Computer Science hosts more than 40 research labs with access 24-hours a day, 7 days a week; 2 open labs for graduate students; and a 135-seat open access lab for undergraduate students. <br>
+      </p>
+
+      <dl class="main">
+        <dt>CS Open Access Lab</dt>
+        <dd>Open to all students. Location: ECSS 2.103 & 2.104</dd>
+        <dt>Graduate Windows Lab</dt>
+        <dd>Graduate CS students have exclusive access. Location: ECSS 3.101</dd>
+      </dl>
+
+        </div>
+      </div>
+
+    <div class="column side">
+      <div class ="tab">
+        <h2>Sign up for UTD CS NewsLetter</h2>
+        <p>Get weekly emails about upcoming events, and research from UTD</p>
+        <form>
+          <label for="Email">Email:</label>
+          <input type="text" id="Email" name="Email" value=""><br>
+
+          <p class="b">Would you like to sign up for the UTD General as well?</p>
+          <input type="radio" id="Yes" name="answer" value="Yes">
+          <label for="Yes">Yes</label><br>
+          <input type="radio" id="No" name="answer" value="No">
+          <label for="No">No</label><br><br>
+
+          <input type="submit" value="Submit">
+
+          </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="footer">
+
+  <p>Can't See? Double the Text Size! <button onclick="doubleTextSize()">Try it</button> </p>
+  <p>Want a different Color? Click this! <button onclick="changeTabBackground()">Try it</button> </p>
+
+  <p><em>Cade Cottrell</em>
+  <br>
+  NetID: <strong>cac160030</strong>
+  <br>
+  Assignment 1</p>
+  <img src="sitePictures/utdLogo.png">
+</div>
+
+
+</body>
+</html>

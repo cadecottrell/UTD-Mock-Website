@@ -1,0 +1,345 @@
+<html>
+<?php
+  session_start();
+?>
+<title>Faculty</title>
+<head>
+<link rel="stylesheet" type="text/css" href="CSS/facultyStyle.css">
+<link rel="icon" href="sitePictures/utdLogo.png">
+<script type="text/javascript" src= "infoTab.js"></script>
+</head>
+<body onload="startDate()">
+
+<section class="infoTab">
+  <div class="info">
+    <p>Current Date/Time: <span id="Date/Time"></span></p>
+  </div>
+</section>
+
+
+<section class="headerSection">
+  <div class="header">
+    <h1>UTD Computer Science</h1>
+    <h6>Erik Jonsson School of Engineering and Computer Science</h6>
+  </div>
+</section>
+
+<div class="navigation">
+  <ul>
+
+  <li><a href="home.html">Home</a></li>
+  <li><a href="faculty.html">Faculty</a></li>
+  <li><a href="Student.html">Students</a></li>
+  <li><a href="research.html">Research</a></li>
+  <li><a href="admission.html">Admission</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  <li><a href="Signup.php">Sign Up</a></li>
+  <li><a href="login.php">Login</a></li>
+
+  </ul>
+</div>
+
+<section class="contentSection">
+  <div class="content">
+
+    <div class="column side">
+      <div class="tab">
+        <img class="sidePic" src="sitePictures/happyFaculty.jpg" height="25%" width="90%">
+        <h2>Faculty Benefits</h2>
+
+        <p>Employee benefits consist of...</p>
+
+        <ol>
+          <li>Discounts</li>
+          <li>Employee Wellness</li>
+          <li>Holidays</li>
+          <li>Insurance</li>
+          <li>Paid Time Off</li>
+          <li>Retirement</li>
+        </ol>
+
+        <p>If you have questions about these benefits, refer to our Frequently Asked Questions (FAQs) below.</p>
+
+      </div>
+
+
+    </div>
+
+    <div class="column middle">
+      <div class="tab">
+        <h2>THE MOST DEDICATED FACULTY TEAM</h2>
+        <h6>52 tenure-track faculty members, and 44 senior lecturers.</h6>
+
+        <img class="sidePic" src="sitePictures/temocFaculty.jpg" height="30%" width="60%"> <br>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p><br>
+
+      <p>Here are some articles detailing our staff.</p>
+
+      <dl class="main">
+        <dt>Dr. Murat Kantarcioglu Discusses Whether Stablecoins are the Future of the Crypto Space</dt>
+        <dd><a href="https://cs.utdallas.edu/dr-murat-kantarcioglu-discusses-whether-stablecoins-are-the-future-of-the-crypto-space/"> Are Stablecoins the Future of the Crypto Space</a></dd>
+        <dt>Dr. Jey Veerasamy Hosts Online Tech Lectures For Homebound Students</dt>
+        <dd><a href="https://cs.utdallas.edu/dr-jey-veerasamy-hosts-online-tech-lectures-for-homebound-students/">Dr. Jey Veerasamy's online lectures</a></dd>
+        <dt>Dr. Murat Kantarcioglu Weighs in on Whether Blockchain Technology Will Start to Rule the World Because of COVID-19</dt>
+        <dd><a href="https://cs.utdallas.edu/dr-murat-kantarcioglu-weighs-in-on-whether-blockchain-technology-will-start-to-rule-the-world-because-of-covid-19/">Dr. Murat Kantarcioglu Weighs in on Blockchain Technology</a></dd>
+      </dl>
+
+      </div>
+
+
+      <div class="tab">
+        <h2>Meet our faculty</h2>
+
+        <div class="horizontalBox">
+          <div class="boxContent">
+
+            <h2>Name: <span>Anjum Chida</span></h2>
+            <h3>Email: <span>anjum.chida@utdallas.edu</span></h3>
+            <h3>Office: <span>ECSS 4.230</span></h3>
+            <h4>For more information click the following text:</h4>
+
+              <div class="boxLayout">
+                <h3 onclick="showInfo(this)">Education</h3>
+
+                  <ul class="hidden">
+                    <li>Ph.D., Computer Science, Georgia State University, 2012</li>
+                    <li>M.S., Computer Science, Georgia State University, 2007</li>
+                    <li>Bachelor of Computer Engineering, University of Madras, India</li>
+                  </ul>
+
+                <h3 onclick="showInfo(this);">Research and Interests</h3>
+
+                  <ul class="hidden">
+                    <li>Machine Learning</li>
+                    <li>Bioinformatics</li>
+                    <li>Computational Biology</li>
+                  </ul>
+
+                <h3 onclick="showInfo(this);">Major Honors and Awards</h3>
+
+                <ul class="hidden">
+                  <li>Georgia State 2CI Fellowship for the year 2011 for excellence in bioinformatics research.</li>
+                  <li>Molecular Bases for Disease Fellowship for years 2007, 2008, 2009, and 2010.</li>
+                </ul>
+
+                <h3 onclick="showInfo(this);">Representative Publications</h3>
+
+                <ul class="hidden">
+                  <li>Anjum Chida, R. W. Harrison and Y.-Q. Zhang, “Enhanced Encoding with Improved Fuzzy Decision Tree Testing Using CASP Templates”, Special Issue on Bioinformatics, IEEE Computational Intelligence Magazine, vol. 8, no. 4, pp. 55-60, 2012.</li>
+                  <li>Anjum Chida (A. Reyaz-Ahmed), R. W. Harrison and Y.-Q. Zhang, “Protein Model Assessment via Machine Learning Techniques,” International Journal of Functional Informatics and Personalized Medicine, 2011.</li>
+                  <li>Anjum Chida (A. Reyaz-Ahmed), N. Abu-halaweh, W. Harrison and Y.-Q. Zhang, “Protein Model Assessment via Improved Fuzzy Decision Tree,” Proc. of BIOCOMP 2010, Las Vegas, July 12-15, 2010.</li>
+                  <li>Anjum Chida (A. Reyaz-Ahmed), R. W. Harrison and Y.-Q. Zhang, “3D Protein Model Assessment Using Geometric and Biological Features,” Proceedings of SEDM 2010, Chengdu, June 23-25, 2010.</li>
+                  <li>Anjum Chida (A. Reyaz-Ahmed), Y.-Q. Zhang, and R. W. Harrison, “Granular Decision Tree and Evolutionary Neural SVM for Protein Secondary Structure Prediction,” International Journal of Computational Intelligence Systems, v.2, n.2, p.343-352, Dec. 2009</li>
+                </ul>
+
+              </div>
+          </div>
+        </div>
+
+
+        <div class="horizontalBox">
+          <div class="boxContent">
+            <h6 style="margin: 0px">Picture:</h6>
+            <img class="facultyPicture" src="sitePictures/Chida.jpg" height="35%" width="60%" style="margin-bottom:10px">
+          </div>
+        </div>
+      </div>
+
+      <div class="tab">
+        <div class="horizontalBox">
+          <div class="boxContent">
+
+            <h2>Name: <span>Ebru Çankaya</span></h2>
+            <h3>Email: <span>ebru.cankaya@utdallas.edu</span></h3>
+            <h3>Office: <span>ECSS 3.604</span></h3>
+            <h4>For more information click the following text:</h4>
+
+            <div class="boxLayout">
+              <h3 onclick="showInfo(this)">Education</h3>
+              <ul class="hidden">
+                <li>Ph.D., Ege University International Computer Institue</li>
+                <li>M.B.A., The University of Texas at Dallas</li>
+                <li>M.Sc., Ege University Department of Computer Science</li>
+              </ul>
+
+              <h3 onclick="showInfo(this)">Research and Interests</h3>
+              <ul class="hidden">
+                <li>Computer security</li>
+                <li>Data security</li>
+                <li>Lossless compression</li>
+                <li>Cryptology</li>
+              </ul>
+
+              <h3 onclick="showInfo(this)">Major Honors and Awards</h3>
+              <ul class="hidden">
+                <li>Faculty of the Month Campus Winner Award, The National Association of College and University Residence Halls, the University of Texas at Dallas, January 2013</li>
+                <li>“Thank a Teacher” Award, University of North Texas Department of Computer Science, Fall 2011</li>
+              </ul>
+
+              <h3 onclick="showInfo(this)">Representative Publications</h3>
+              <ul class="hidden">
+                <li>CANKAYA CELIKEL Ebru, “The Effect of Changing Programming Language to Student Success in Undergraduate Computer Science Curriculum”, International Conference on Frontiers in Education: Computer Science and Computer Engineering, Las Vegas, NV, 21-24 July, 2014.</li>
+                <li>CANKAYA CELIKEL Ebru, DARWISH Omar, “Improving Compression Performance with a Star Encoding Front End: A Linguistic Comparison”, International Conference on Foundations of Computer Science, Las Vegas, NV, 22-25 July, 2013.</li>
+                <li>CHARTREE Jedsada, CANKAYA CELIKEL Ebru, PHITHAKKITNUKOON Santi, “Query Expansion Using Association Matrix For Improved Information Retrieval Performance”, International Conference on Information and Knowledge Engineering, Las Vegas, NV, 22-25 July, 2013.</li>
+                <li>ISRAELSON Jennifer, CANKAYA CELIKEL Ebru, “A Hybrid Web Based Personal Health Record System Shielded with Comprehensive Security”, Hawaii Int’l Conf. on System Sciences, Maui, HI, 4-7 January, 2012.</li>
+                <li>CANKAYA CELIKEL Ebru, NAIR Suku, CANKAYA Hakki C., “Applying Error Correction Codes to Achieve Security and Dependability”, Journal of Computers Standards and Interfaces, July 2012.</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="horizontalBox">
+          <div class="boxContent">
+            <h6 style="margin: 0px">Picture:</h6>
+            <img class="facultyPicture" src="sitePictures/Cankaya.jpg" height="35%" width="60%" style="margin-bottom:10px">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tab">
+
+        <div class="horizontalBox">
+          <div class="boxContent">
+            <h2>Name: <span>Ranran Feng</span></h2>
+            <h3>Email: <span>rrfeng@utdallas.edu</span></h3>
+            <h3>Office: <span>ECSS 4.209</span></h3>
+            <h4>For more information click the following text:</h4>
+
+            <div class="boxLayout">
+              <h3 onclick="showInfo(this)">Education</h3>
+              <ul class="hidden">
+                <li>Ph.D. in Computer Science, the University of Texas at Dallas, Richardson, TX (2014)</li>
+                <li>MS in Computer Science, Sam Houston State University, Huntsville, TX (2009)</li>
+              </ul>
+
+              <h3 onclick="showInfo(this)">Research Interests</h3>
+              <ul class="hidden">
+                <li>Content based image retrieval</li>
+                <li>Pattern Recognition</li>
+                <li>Machine Learning</li>
+                <li>Face Detection & Recognition</li>
+                <li>Content based online Multimedia Filtering</li>
+                <li>Object Detection & Recognition</li>
+                <li>Computer Vision</li>
+                <li>Multimedia Retrieval</li>
+                <li>Data Mining</li>
+              </ul>
+
+              <h3 onclick="showInfo(this)">Major Honors and Awards</h3>
+              <ul class="hidden">
+                <li>Distinguished Teaching Assistant Award, UT Dallas</li>
+                <li>ACM Multimedia (MM) Student Travel Grant, ACM</li>
+                <li>Tektronix Scholarship, UT Dallas</li>
+                <li>Meritorious Award in Mathematical Contest in Modeling (MCM)</li>
+              </ul>
+
+              <h3 onclick="showInfo(this)">Representative Publications</h3>
+              <ul class="hidden">
+                <li>Feng and B. Prabhkaran. “A Novel Method for Post-Surgery Face Recognition using Sum of Facial Parts Recognition”, 2014 IEEE Winter Conference on Application of Computer Vision (WACV 2014), 2014.</li>
+                <li>Feng and B. Prabhkaran. “Facilitating Fashion Camouflage Art”, 2013 ACM International Conference on Multimedia (MM 2013), 2013.</li>
+                <li>Feng and B. Prabhkaran. “Quantifying the Makeup Effect on Female Faces and its Application for Age Estimation”, 2012 International Symposium on Multimedia (ISM 2012), 2012.</li>
+                <li>Feng and J. Ji. “A Novel Approach for Depth Extraction from Single 2D image”, 2012 IEEE International Conference on Systems and Informatics, 2012.</li>
+              </ul>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+        <div class="horizontalBox">
+          <div class="boxContent">
+            <h6 style="margin: 0px">Picture:</h6>
+            <img class="facultyPicture" src="sitePictures/Ranran.jpg" height="35%" width="60%" style="margin-bottom:10px">
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="tab">
+        <h2>FAQs</h2>
+
+        <table>
+          <tr>
+            <th>Question</th>
+            <th>Answer</th>
+          </tr>
+          <tr>
+            <td>Where can I get information on how to enroll for benefits?</td>
+            <td>You can get benefits enrollment information through the Benefits Section of the Office of Human Resources
+              website.
+            </td>
+          </tr>
+          <tr>
+            <td>When can I enroll for my benefits?</td>
+            <td>New hires and newly eligible employees must enroll within 31 days of employment date or benefits eligibility date
+              for optional insurance coverage (includes employee medical for part-time employees (20-29 hours per week). Fulltime (30-40 hours per week) employees will be enrolled automatically in the basic package (employee only UT
+              Select Medical, $40,000 Basic Life and $40,000 Basic AD&D).</td>
+          </tr>
+          <tr>
+            <td>When Can I make changes to my benefits after my initial enrollment?</td>
+            <td>When you experience a status change (life event) that will allow you to make changes to your benefits, you have 31
+              days from the date of the event to make changes or during an annual enrollment in July.</td>
+          </tr>
+          <tr>
+            <td>When can I enroll if I missed the initial enrollment period and I do not have a qualified status event? </td>
+            <td>You can enroll during the Annual Enrollment period of July 15 through July 31 with an effective date of September 1</td>
+          </tr>
+          <tr>
+            <td>Will I be approved for EOI?</td>
+            <td>There is no guarantee of approval. An applicant may be declined coverage based on their height and weight alone.</td>
+          </tr>
+        </table>
+
+      </div>
+
+    </div>
+
+    <div class="column side">
+      <div class ="tab">
+        <h2>Sign up for UTD CS NewsLetter</h2>
+        <p>Get weekly emails about upcoming events, and research from UTD</p>
+        <form>
+          <label for="Email">Email:</label>
+          <input type="text" id="Email" name="Email" value=""><br>
+
+          <p class="b">Would you like to sign up for the UTD General as well?</p>
+          <input type="radio" id="Yes" name="answer" value="Yes">
+          <label for="Yes">Yes</label><br>
+          <input type="radio" id="No" name="answer" value="No">
+          <label for="No">No</label><br><br>
+
+          <input type="submit" value="Submit">
+
+          </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="footer">
+
+  <p>Can't See? Double the Text Size! <button onclick="doubleTextSize()">Try it</button> </p>
+  <p>Want a different Color? Click this! <button onclick="changeTabBackground()">Try it</button> </p>
+
+  <p><em>Cade Cottrell</em>
+  <br>
+  NetID: <strong>cac160030</strong>
+  <br>
+  Assignment 1</p>
+  <img src="sitePictures/utdLogo.png">
+</div>
+
+
+</body>
+</html>
